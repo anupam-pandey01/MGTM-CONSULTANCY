@@ -49,7 +49,7 @@ const StudyAbroad = () => {
 
         <div className="btn-group">
 
-          <a href="/contact-us" className="btn-outline">
+          <a href="/book-counseling" className="btn-outline">
             Book Counseling
           </a>
 

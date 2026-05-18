@@ -10,6 +10,8 @@ import Fqa from './pages/FQA/Fqa'
 import CareerCoaching from './pages/CareerCoaching/CareerCoaching'
 import LiberalArts from './pages/LiberalArts/LiberalArts'
 import Blog from './pages/Blog/Blog'
+import BookCounseling from './pages/Book Counseling/BookCounseling'
+import JoinUs from './pages/JoinUs/JoinUs'
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
         <Route path='/career-coaching' element={<CareerCoaching/>}/>
         <Route path='/liberal-arts' element={<LiberalArts/>}/>
         <Route path='/blog' element={<Blog/>}/>
+        <Route path='/book-counseling' element={<BookCounseling/>}/>
+        <Route path='/join-us' element={<JoinUs/>}/>
       </Routes>
       <Footer/>
     </div>

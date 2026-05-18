@@ -61,7 +61,7 @@ return (
 
           </div>
 
-          <a href="#" class="btn-primary">
+          <a href="/join-us" class="btn-primary">
             Join as School
           </a>
 
@@ -99,7 +99,7 @@ return (
 
           </div>
 
-          <a href="#" class="btn-primary">
+          <a href="/join-us" class="btn-primary">
             Join as College
           </a>
 
