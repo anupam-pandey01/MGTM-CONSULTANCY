@@ -1,0 +1,157 @@
+
+    .study-abroad-section{
+      padding:100px 0;
+      background:var(--off-white);
+    }
+
+    /* Layout */
+
+    .study-abroad-section .container{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    /* Left Content */
+
+    .section-tag{
+      color:var(--gold);
+      font-size:14px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      margin-bottom:15px;
+    }
+
+    .section-title{
+      font-size:52px;
+      line-height:1.2;
+      color:var(--navy);
+      margin-bottom:20px;
+      font-family:'Playfair Display',serif;
+    }
+
+    .section-title span{
+      color:var(--gold);
+    }
+
+    .section-desc{
+      color:var(--text-muted);
+      line-height:1.8;
+      margin-bottom:35px;
+      font-size:16px;
+    }
+
+    /* Features */
+
+    .feature-list{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      margin-bottom:40px;
+    }
+
+    .feature-item{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:500;
+      color:var(--navy);
+    }
+
+    .feature-icon{
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      background:rgba(201,168,76,0.18);
+      color:var(--gold);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      font-weight:bold;
+    }
+
+    /* Buttons */
+
+    .btn-group{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn-primary{
+      background:var(--navy);
+      color:var(--white);
+      padding:14px 32px;
+      border-radius:50px;
+      text-decoration:none;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .btn-primary:hover{
+      background:var(--navy-deep);
+    }
+
+    .btn-outline{
+      border:2px solid var(--gold);
+      color:var(--gold);
+      padding:14px 32px;
+      border-radius:50px;
+      text-decoration:none;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .btn-outline:hover{
+      background:var(--gold);
+      color:var(--navy);
+    }
+
+    /* Image */
+
+    .study-image img{
+      width:100%;
+      border-radius:30px;
+      box-shadow:0 10px 35px rgba(0,0,0,0.12);
+    }
+
+    /* =========================================
+    Responsive Design
+    ========================================= */
+
+    @media(max-width:992px){
+
+      .study-abroad-section .container{
+        grid-template-columns:1fr;
+      }
+
+      .study-image{
+        order:-1;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .study-abroad-section{
+        padding:70px 0;
+      }
+
+      .section-title{
+        font-size:38px;
+      }
+
+      .btn-group{
+        flex-direction:column;
+      }
+
+      .btn-primary,
+      .btn-outline{
+        width:100%;
+        text-align:center;
+      }
+
+    }

@@ -1,0 +1,5 @@
+/* DESTINATIONS */
+.destinations-section{text-align:center}
+.destinations-grid{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:800px;margin:0 auto}
+.dest-chip{padding:12px 30px;border-radius:50px;border:2px solid var(--navy);color:var(--navy);font-weight:600;font-size:15px;transition:all var(--tr);cursor:pointer;display:inline-block}
+.dest-chip:hover{background:var(--navy);color:var(--white);transform:translateY(-3px);box-shadow:0 8px 20px rgba(13,32,87,.25)}

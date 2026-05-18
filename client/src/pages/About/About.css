@@ -1,0 +1,257 @@
+img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: auto;
+    }
+
+    .about-section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .section-tag {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    .section-desc {
+      max-width: 760px;
+      margin: auto;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Mission Vision */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 100px;
+    }
+
+    .mission-card,
+    .vision-card {
+      border-radius: 28px;
+      padding: 45px;
+      transition: var(--tr);
+      box-shadow: var(--shadow);
+    }
+
+    .mission-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .vision-card {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .mission-card:hover,
+    .vision-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .icon-box {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .mission-card .icon-box {
+      background: rgba(201,168,76,.15);
+    }
+
+    .vision-card .icon-box {
+      background: rgba(255,255,255,.15);
+    }
+
+    .card-title {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      font-family: var(--font-head);
+    }
+
+    .card-text {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .vision-card .card-text {
+      color: var(--gold-light);
+    }
+
+    /* Leadership */
+    .leadership-section {
+      margin-bottom: 100px;
+    }
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+
+    .leader-card {
+      background: var(--white);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: var(--tr);
+    }
+
+    .leader-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .leader-img {
+      height: 340px;
+      object-fit: cover;
+    }
+
+    .leader-content {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .leader-content h3 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .leader-role {
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .leader-content p {
+      color: var(--text-muted);
+    }
+
+    /* Metrics */
+    .metrics-section {
+      background: var(--navy);
+      border-radius: 40px;
+      padding: 70px 40px;
+      color: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .metrics-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .metrics-header h2 {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 16px;
+    }
+
+    .metrics-header p {
+      color: var(--gold-light);
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .metric-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
+      padding: 35px 20px;
+      text-align: center;
+      transition: var(--tr);
+    }
+
+    .metric-card:hover {
+      background: rgba(255,255,255,.12);
+      transform: translateY(-5px);
+    }
+
+    .metric-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .metric-title {
+      color: var(--gold-light);
+      font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 70px 0;
+      }
+
+      .mission-grid,
+      .leadership-grid,
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-card,
+      .vision-card {
+        padding: 32px 24px;
+      }
+
+      .metrics-section {
+        padding: 50px 24px;
+      }
+
+      .leader-img {
+        height: 280px;
+      }
+    }

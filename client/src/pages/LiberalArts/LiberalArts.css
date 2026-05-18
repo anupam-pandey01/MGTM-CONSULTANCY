@@ -1,0 +1,110 @@
+.liberal-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HERO */
+.liberal-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f5f9ff;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.liberal-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.liberal-hero p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* SECTIONS */
+.liberal-section {
+  margin-bottom: 50px;
+}
+
+.liberal-section h2 {
+  margin-bottom: 15px;
+}
+
+/* GRID */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* CTA */
+.liberal-cta {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--navy-light);
+  color: white;
+  border-radius: 12px;
+}
+
+.primary-btn {
+  background: var(--navy-light);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.liberal-cta .primary-btn {
+  background: white;
+  color: var(--navy-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .liberal-hero h1 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 570px){
+    .grid-3 {
+        /* display: grid; */
+        grid-template-columns: none;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .grid-2 {
+        grid-template-columns: none;
+        justify-content: center;
+        gap: 10px;
+    }
+    .card{
+        width: 350px;
+    }
+    .liberal-section h2 {
+        text-align: center;
+    }
+}
