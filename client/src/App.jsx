@@ -12,6 +12,7 @@ import LiberalArts from './pages/LiberalArts/LiberalArts'
 import Blog from './pages/Blog/Blog'
 import BookCounseling from './pages/Book Counseling/BookCounseling'
 import JoinUs from './pages/JoinUs/JoinUs'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/book-counseling' element={<BookCounseling/>}/>
         <Route path='/join-us' element={<JoinUs/>}/>
       </Routes>
+      <ToastContainer/>
       <Footer/>
     </div>
   )
