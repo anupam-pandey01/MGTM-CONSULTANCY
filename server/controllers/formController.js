@@ -15,10 +15,10 @@ const saveContactData = async (req, res)=>{
     }
 
         try {
-        const oldemail = await Contact.findOne({email});
+        const oldMail = await Contact.findOne({email});
         const oldMobile = await Contact.findOne({contactNumber});
 
-        if (oldMobile, oldemail){
+        if (oldMobile || oldMail){
             return res.status(400).json({
                 success: false, 
                 message: "You are in our Database. We will connect with you in 24 hrs",
@@ -59,7 +59,7 @@ const saveBookingData = async (req, res)=>{
         const oldMail = await Counselling.findOne({email});
         const oldMobile = await Counselling.findOne({contactNumber});
 
-        if (oldMobile, oldMail){
+        if (oldMobile || oldMail){
             return res.status(400).json({
                 success: false, 
                 message: "You're in our database. We'll contact you within 24 hrs",
