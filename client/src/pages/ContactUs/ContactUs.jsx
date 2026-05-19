@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./ContactUs.css"
 import { saveContact } from '../../api/contactApi'
-import { handleError } from '../../utils/handler';
+import { handleError, handleSuccess } from '../../utils/handler';
 
 const ContactUs = () => {
 
@@ -26,8 +26,10 @@ const ContactUs = () => {
 
         try {
 
-            const response = await saveContact(formData);
-            
+            const { success, message } = await saveContact(formData);
+            if (success){
+                handleSuccess(message)
+            }
 
             setFormData({
                 fullName: "",
