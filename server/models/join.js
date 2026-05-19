@@ -10,7 +10,7 @@ const joinSchema = new Schema({
         type: String,
         required: true,
         enum:{
-            values: ["College", "School", "Others"],
+            values: ["college", "school", "others"],
             message: `{VALUE} is not a valid organization`
         } 
     },
