@@ -21,7 +21,7 @@ const saveContactData = async (req, res)=>{
         if (oldMobile || oldMail){
             return res.status(400).json({
                 success: false, 
-                message: "You are in our Database. We will connect with you in 24 hrs",
+                message: "You're in our database. We'll contact you within 24 hrs",
             })
         }
 
