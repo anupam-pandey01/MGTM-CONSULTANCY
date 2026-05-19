@@ -36,4 +36,43 @@ const contactValidationSchema = Joi.object({
         })
 });
 
-module.exports = contactValidationSchema;
+const joinAsValidationSchema = Joi.object({
+    organizationName: Joi.string()
+        .min(3)
+        .max(50)
+        .required()
+        .messages({
+            "string.empty": "organization name is required",
+            "string.min": "organization name must be at least 3 characters",
+            "any.required": "organization name is required"
+        }),
+
+    joinAs: Joi.string()
+        .valid("college", "school", "others")
+        .required()
+        .messages({
+            "any.only": "Join As must be college, school, or others",
+            "any.required": "Join As is required"
+        }),
+
+    contactNumber: Joi.string()
+        .pattern(/^[0-9]{10}$/)
+        .required()
+        .messages({
+            "string.pattern.base": "Contact number must be 10 digits",
+            "any.required": "Contact number is required"
+        }),
+
+    email: Joi.string()
+        .email()
+        .required()
+        .messages({
+            "string.email": "Invalid email format",
+            "any.required": "Email is required"
+        })
+});
+
+module.exports = { 
+    contactValidationSchema,
+    joinAsValidationSchema
+};
