@@ -65,7 +65,7 @@ const Navbar = () => {
         </ul>
 
         <div className='nav-right'>
-          <Link to={"/contact-us"}><button className='login'>Get Free Counselling</button></Link>
+          <Link to={"/book-counseling"}><button className='login'>Get Free Counselling</button></Link>
           {/* <button className='register'>Register</button> */}
         </div>
 

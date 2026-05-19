@@ -15,10 +15,10 @@ function Footer() {
         <h4>Quick Links</h4>
         <ul>
           <li> <Link to={"/about"}>About Us</Link></li>
-          <li><a href="#">Services</a></li>
+          <li><Link to={'/liberal-arts'}>Services</Link></li>
           <li><a href="#">Destinations</a></li>
           <li><a href="#">Universities</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><Link to={"/blog"}>Blog</Link></li>
           <li><Link to={"/contact-us"}>Contact Us</Link></li>
         </ul>
       </div>

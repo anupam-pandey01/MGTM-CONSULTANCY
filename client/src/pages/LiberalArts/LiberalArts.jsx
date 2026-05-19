@@ -15,7 +15,7 @@ const LiberalArts = () => {
           Explore multiple disciplines, discover your interests, and build a
           flexible career path with our expert guidance.
         </p>
-        <Link to={`/contact-us`}><button className="primary-btn">Book Free Consultation</button></Link>
+        <Link to={"/book-counseling"}><button className="primary-btn">Book Free Consultation</button></Link>
       </section>
 
       {/* ABOUT */}
