@@ -1,4 +1,4 @@
-const contactValidationSchema = require("../utils/vallidateSchema");
+const contactValidationSchema = require("../utils/validateSchema");
 const Contact = require("../models/contact")
 
 const saveContactData = async (req, res)=>{
