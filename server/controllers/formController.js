@@ -16,10 +16,17 @@ const saveContactData = async (req, res)=>{
     }
 
         try {
-        const oldMail = await Contact.findOne({email});
-        const oldMobile = await Contact.findOne({contactNumber});
+        const exitingUser = await Contact.findOne({
+            $or:[
+                { email },
+                { contactNumber }
+            ]
+        });
 
-        if (oldMobile || oldMail){
+        if (exitingUser){
+            exitingUser.duplicateCount += 1
+
+            await exitingUser.save();
             return res.status(400).json({
                 success: false, 
                 message: "You're in our database. We'll contact you within 24 hrs",
