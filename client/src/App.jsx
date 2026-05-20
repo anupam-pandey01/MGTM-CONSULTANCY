@@ -13,27 +13,37 @@ import Blog from './pages/Blog/Blog'
 import BookCounseling from './pages/Book Counseling/BookCounseling'
 import JoinUs from './pages/JoinUs/JoinUs'
 import { ToastContainer } from 'react-toastify'
+import PublicLayout from './layout/publicLayout'
+import AdminLayout from './layout/AdminLayout'
+import AdminDashboard from './pages/AdminPages/Dashboard/AdminDashboard'
 
 function App() {
 
   return (
     <div className="app">
-      <Navbar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/study-abroad' element={<StudyAbroad/>}/>
-        <Route path='/contact-us' element={<ContactUs/>}/>
-        <Route path='/partnerships' element={<Partnerships/>}/>
-        <Route path='/faq' element={<Fqa/>}/>
-        <Route path='/career-coaching' element={<CareerCoaching/>}/>
-        <Route path='/liberal-arts' element={<LiberalArts/>}/>
-        <Route path='/blog' element={<Blog/>}/>
-        <Route path='/book-counseling' element={<BookCounseling/>}/>
-        <Route path='/join-us' element={<JoinUs/>}/>
+        {/* Public routes */}
+        <Route element={<PublicLayout/>}>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/study-abroad' element={<StudyAbroad/>}/>
+          <Route path='/contact-us' element={<ContactUs/>}/>
+          <Route path='/partnerships' element={<Partnerships/>}/>
+          <Route path='/faq' element={<Fqa/>}/>
+          <Route path='/career-coaching' element={<CareerCoaching/>}/>
+          <Route path='/liberal-arts' element={<LiberalArts/>}/>
+          <Route path='/blog' element={<Blog/>}/>
+          <Route path='/book-counseling' element={<BookCounseling/>}/>
+          <Route path='/join-us' element={<JoinUs/>}/>
+        </Route>
+
+        {/* Adimin Route */}
+        <Route path='/admin' element={<AdminLayout/>}>
+          <Route index element={<AdminDashboard />} />
+        </Route>
       </Routes>
+     
       <ToastContainer/>
-      <Footer/>
     </div>
   )
 }
