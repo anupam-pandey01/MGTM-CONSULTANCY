@@ -64,10 +64,17 @@ const saveBookingData = async (req, res)=>{
     }
 
         try {
-        const oldMail = await Counselling.findOne({email});
-        const oldMobile = await Counselling.findOne({contactNumber});
+        const exitingUser = await Counselling.findOne({
+            $or:[
+                {email},
+                {contactNumber}
+            ]
+        });
 
-        if (oldMobile || oldMail){
+        if (exitingUser){
+            exitingUser.duplicateCount += 1
+
+            await exitingUser.save();
             return res.status(400).json({
                 success: false, 
                 message: "You're in our database. We'll contact you within 24 hrs",
@@ -103,10 +110,17 @@ const saveJoinUs = async (req, res)=>{
     }
 
     try {
-        const oldMail = await Join.findOne({email});
-        const oldMobile = await Join.findOne({contactNumber});
+        const exitingUser = await Join.findOne({
+            $or:[
+                {email},
+                {contactNumber}
+            ]
+        });
 
-        if (oldMobile || oldMail){
+        if (exitingUser){
+            exitingUser.duplicateCount += 1
+
+            await exitingUser.save();
             return res.status(400).json({
                 success: false, 
                 message: "You're in our database. We'll contact you within 24 hrs",

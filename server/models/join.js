@@ -27,6 +27,10 @@ const joinSchema = new Schema({
         unique: true,
         lowercase: true,
         trim: true,
+    },
+    duplicateCount: {
+        type: Number,
+        default: 0
     }
 });
 
